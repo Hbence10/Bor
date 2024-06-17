@@ -32,7 +32,8 @@ function fillSelect(response){
 function selectBor(){
     let selectedBor = borSelect.value
     detailsDiv.style.display = "";
-    borImg.src = borList[borNames.indexOf(selectedBor)].image
+    borImg.src = borList[borNames.indexOf(selectedBor)].image || 'A Bor képe';
+    borImg.alt = borList[borNames.indexOf(selectedBor)].wine || 'A Bor képe';
     borName.innerHTML = borNames[borNames.indexOf(selectedBor)]
     borPlace.innerHTML = borList[borNames.indexOf(selectedBor)].location
     borPince.innerHTML = borList[borNames.indexOf(selectedBor)].winery
